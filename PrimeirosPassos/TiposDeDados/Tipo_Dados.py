@@ -18,12 +18,18 @@ pi = 3,14
 text1 = "Heitor"
 
 # Boolean
-ligado = True
-desligado = False
+tem_cafe = True
+tem_cha = False
+
+tem_bebida_quente = tem_cafe or tem_cha
+tem_os_dois = tem_cafe and tem_cha
+
+print(tem_bebida_quente)
+print(tem_os_dois)
 
 # Listas e Tupla 
-# Lista(Array que aumenta)
-# Tupla(Não aumenta)
+
+# Lista(Array que aumenta), Tupla(Não aumenta)
 
 # Listas Utilizam COLCHETES[]
 frutas = ["maçã, banana, uva"]
