@@ -43,3 +43,20 @@ cores_rgb = (255,0,0)
 print(coordenadas)
 
 print(coordenadas[1])
+
+# O dicinario funciona fazendo a busca de um valor chave e me retornando o valor desta chave EX: Chamei a palavra-chave nome ele me retorná Carlos;
+# Dicionario chave valor
+pessoa = {
+    "nome": "Carlos",
+    "idade": "30",
+    "profissao": "engenheiro"
+
+}
+
+# Acessando valores, não é necessário utilizar o .get
+print(pessoa["nome"])
+print(pessoa.get("idade"))
+
+
+# Adicionando novo par chave-valor
+pessoa["cidade"] = "São Paulo"
