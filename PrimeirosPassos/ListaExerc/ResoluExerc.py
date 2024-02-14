@@ -1,4 +1,5 @@
 # 1
+from errno import EAFNOSUPPORT
 from tkinter import N
 
 from matplotlib import axes
@@ -97,7 +98,8 @@ idadeUsua = int(input("Digite sua idade:"))
 
 if idadeUsua > 18 and idadeUsua<65:
     print("Você está apito")
-    
+else: 
+    print("Você não está apito")
 
 
 
@@ -111,4 +113,43 @@ c= -3
 
 delta = (b**2) - 4*a*c
 
-# x1 = (-b + (delta**0.5)) / 
+x1 = (-b - (delta**0.5))/2*a
+x2 = (-b + (delta**0.5))/2*a
+
+print(x1)
+print(x2)
+
+
+euro = 0.93
+libra = 0.80
+
+
+valorAConvert = float(input("Digite o valor desejado em Dollar:"))
+
+print("Digite para qual moeda você quer converter:")
+moedaConvert = int(input("1- euro  2- libra esterlina"))
+print(moedaConvert)
+
+if moedaConvert == 1:
+    valorConvertEuro = valorAConvert*euro
+    print(valorConvertEuro)
+else:
+    valorConvertLibra = valorAConvert*libra
+    print(valorConvertLibra)
+
+
+
+
+fraseAnalisar = input("Digite alguma frase: ")
+Palindromo = True
+
+fraseMudada = fraseAnalisar[::-1]
+ 
+if fraseAnalisar == fraseMudada:
+    print(Palindromo)
+else:
+    Palindromo = False
+    print(Palindromo)
+
+
+fraseAnalisar 
