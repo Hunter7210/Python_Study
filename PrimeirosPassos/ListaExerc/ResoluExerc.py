@@ -134,8 +134,6 @@ else:
     print(valorConvertLibra)
 
 
-
-
 fraseAnalisar = input("Digite alguma frase: ")
 Palindromo = True
 
@@ -148,8 +146,6 @@ else:
     print(Palindromo)
 
 
-fraseSeparada = fraseAnalisar.split(' ')
-
-print(fraseAnalisar)
-
-print(len(fraseSeparada))
+fraseDig = input("Digite uma frase: ")
+palavras = fraseDig.split()
+palavra_mais_longa = max(palavras)
