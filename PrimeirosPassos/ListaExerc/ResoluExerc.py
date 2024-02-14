@@ -1,9 +1,5 @@
 # 1
-from errno import EAFNOSUPPORT
-from tkinter import N
-
 from matplotlib import axes
-
 
 print("Digite o primeiro valor")
 a = int(input())
@@ -107,12 +103,12 @@ else:
 
 # LISTA AVANÇADA
 
-a = 5
-b = -4
-c= -3
+a = float(input("Digiteo coeficiete a: "))
+b = float(input("Digiteo coeficiete b: "))
+c= float(input("Digiteo coeficiete c: "))
 
 delta = (b**2) - 4*a*c
-
+#raiz quadrada pode ser determinada por tambem por cmath.sqrt (Esta é uma biblioteca que calcula a raiz, é mais pratico pois o metodo normal pode gerar uma Exception, ai tem que tratar
 x1 = (-b - (delta**0.5))/2*a
 x2 = (-b + (delta**0.5))/2*a
 
@@ -152,4 +148,8 @@ else:
     print(Palindromo)
 
 
-fraseAnalisar 
+fraseSeparada = fraseAnalisar.split(' ')
+
+print(fraseAnalisar)
+
+print(len(fraseSeparada))
