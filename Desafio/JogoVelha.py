@@ -26,6 +26,6 @@ cores = sns.color_palette('pastel')[:2]
 
 # Criar gráfico de pizza
 plt.pie(dados, labels=rotulos, colors=cores, autopct='%1.1f%%')
-plt.title('Gráfico de pizza de X e O')
+plt.title('Gráfico de pizza de x e O')
 plt.show()
 
