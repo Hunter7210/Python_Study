@@ -55,5 +55,3 @@ print(f"Soma total: {total_sum}")
 #Serve para remover aquelas linhas que estão sem valor, nulo, unidimensionais
 squeezed_array = np.squeeze(array_exem) # Esquece remove, valores nulos
 print(squeezed_array)
-
-#Exercicio 02
