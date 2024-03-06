@@ -63,9 +63,33 @@ print(resultado)
 
 #É IMPORTANTE LEMBRAR QUE PARA REALIZAR ESSES CALCULOS DEVE SER UTILIZADO O ARRAY DO NUMPY COM:  np.array([[]]);
 
-
-
 #Operações estátisticas
+
+diagonal_sum = np.trace(my_array)
+print(f"Soma diagonal: {diagonal_sum}")
+
+
+#Encontrando o numero de linhas e colunas de uma matriz
+matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+num_linhas, num_colunas = np.shape(matriz)
+print(f"Número de linhas: {num_linhas}")
+print(f"Número de colunas: {num_colunas}")
+
+#Verificar se um array contem  uma linha especifica
+matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+linha_especifica = np.array([4, 5, 6])
+contem_linha = np.isin(matriz, linha_especifica).all(axis=1).any()
+print(f"Contém a linha específica? {contem_linha}")
+
+#Transpor uma matriz
+matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matriz_transposta = np.transpose(matriz)
+# Ou, alternativamente: matriz_transposta = matriz.T
+print("Matriz original:")
+print(matriz)
+print("Matriz transposta:")
+print(matriz_transposta)
+
 
 
 
