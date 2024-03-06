@@ -95,7 +95,7 @@ while condicao<2:
 num5 = [1,2,3,4,5]
 
 soma = sum(num5)
-mult = np.multiply(nump5)
+mult = np.multiply(num5)
 
 print(num5)
 print(soma)
