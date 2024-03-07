@@ -65,9 +65,9 @@ print(resultado)
 
 #Operações estátisticas
 
+#Soma dos elementos na diagonal
 diagonal_sum = np.trace(my_array)
 print(f"Soma diagonal: {diagonal_sum}")
-
 
 #Encontrando o numero de linhas e colunas de uma matriz
 matriz = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
