@@ -70,6 +70,70 @@ ax.legend(
     wedges,
     receita_total["produto"],
     title="Produtos",
+    loc="center left",
+    bbox_to_anchor=(1, 0, 1, 1),
+)
+
+# Font
+plt.setp(autotexts, size=7, weight="regular")
+
+# Titulo
+ax.set_title("Receita total dos Produtos")
+
+plt.show()
+
+# Definindo os valores nulos do df_produto
+df_produto["receita_total"] = receita_total["receita_total"]
+
+df_produto["vendas_totais"] = mais_vendidos["quantidade"]
+
+print(df_produto)
+
+
+# Plotando o gráfico de barras de produtos vendidos
+plt.figure(figsize=(7, 5))
+
+grafico_produto_vend = sns.barplot(data=mais_vendidos, x="produto", y="quantidade", color="xkcd:coral")
+plt.title("Quantidade de Produtos Vendidos")
+
+plt.xlabel("Produto")
+
+plt.ylabel("Quantidade Vendida")
+
+grafico_produto_vend.bar_label(grafico_produto_vend.containers[0])
+
+plt.tight_layout()
+
+plt.show()
+
+
+# Plotando o gráfico de pizza da receita total dos produtos
+colors = sns.color_palette("pastel")
+
+# Definindo a tamanho da explosão
+explode = (0.02, 0.02, 0.02)
+
+# Criando função para formatar a legenda interna
+def func(pct, allvalues):
+    absolute = int(pct / 100.0 * np.sum(allvalues))
+    return " {:.1f}%\n(R${:d})".format(pct, absolute)
+
+# Configs do grafico de pizza
+fig, ax = plt.subplots(figsize=(6, 6))
+wedges, texts, autotexts = ax.pie(
+    receita_total["receita_total"],
+    autopct=lambda pct: func(pct, receita_total["receita_total"]),
+    labels=receita_total["produto"],
+    explode = explode,
+    colors=colors,
+    textprops=dict(color="black"),
+)
+
+# Definindo a legenda
+ax.legend(
+    wedges,
+    receita_total["produto"],
+    title="Produtos",
     loc="center right",
     bbox_to_anchor=(1, 0, 1, 1),
 )
