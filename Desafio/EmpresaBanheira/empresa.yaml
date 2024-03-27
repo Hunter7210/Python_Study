@@ -438,6 +438,11 @@ comportamento_do_cliente:
     sexo: 
     cidade: Limeira
     valor_gasto_total:
+  - id: 114
+    nome: Loja Propria 2
+    sexo: 
+    cidade: Limeira
+    valor_gasto_total:
 
 desempenho_do_produto:
   - produto: Banheira
