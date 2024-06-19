@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.express as px
 
 
 # Criar um DataFrame de exemplo
@@ -32,3 +33,9 @@ fig, ax = plt.subplots()
 sns.scatterplot(data=df, x='valor1', y='valor2', hue='categoria', ax=ax)
 ax.set_title('Dispersão de Valor1 vs Valor2')
 st.pyplot(fig)
+
+
+# Gráfico de dispersão com plotly
+fig = px.scatter(df, x='valor1', y='valor2', color='categoria', title='Dispersão de Valor1 vs Valor2')
+st.plotly_chart(fig)
+
